@@ -1,5 +1,7 @@
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
 
 def preprocess_X(X):
+    scaler = StandardScaler()
     ohe = OneHotEncoder()
-    return StandardScaler().fit_transform(X)
+
+    return scaler.fit_transform(X)
