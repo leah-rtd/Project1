@@ -1,4 +1,5 @@
 from sklearn.preprocessing import StandardScaler
 
 def preprocess_X(X):
-    return StandardScaler().fit_transform(X)
+    scaler = StandardScaler()
+    return scaler.fit_transform(X)
