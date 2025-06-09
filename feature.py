@@ -1,5 +1,6 @@
-from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import StandardScaler, OneHotEncoder
 
-def preproc(X):
+def preproc(X_num, X_cat):
     scaler = StandardScaler()
-    return scaler.fit_transform(X)
+    ohe = OneHotEncoder()
+    return scaler.fit_transform(X_num), ohe.fit_transform(X_cat)
