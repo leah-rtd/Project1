@@ -1,6 +1,8 @@
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
-
-def preproc(X_num, X_cat):
+from sklearn.linear_model import LinearRegression
+def preproc(X):
     scaler = StandardScaler()
     ohe = OneHotEncoder()
-    return scaler.fit_transform(X_num), ohe.fit_transform(X_cat)
+    model = LinearRegression()
+    model.fit(X)
+    return scaler.fit_transform(X)
